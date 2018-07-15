@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.gargc.dailysalesrecord.Activity.AddCustomer">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gargc.dailysalesrecord.Activity.AddCustomer">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/defaultuserimg"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/addImage"
+        android:layout_marginTop="40dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addImage"
+        android:id="@+id/linear"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="40dp"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/customerName"
+                android:layout_width="270dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/border_rectangular_white"
+                android:gravity="start|center_vertical"
+                android:hint="Customer Name"
+                android:inputType="textCapWords|textPersonName"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:paddingLeft="16dp" />
+
+
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/customerphoneNumber"
+                android:layout_width="270dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/border_rectangular_white"
+                android:gravity="start|center_vertical"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:paddingLeft="16dp" />
+
+
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/customerEmailId"
+                android:layout_width="270dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/border_rectangular_white"
+                android:gravity="start|center_vertical"
+                android:hint="Customer Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:paddingLeft="16dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/customerAmountPaid"
+                android:layout_width="270dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/border_rectangular_white"
+                android:gravity="start|center_vertical"
+                android:hint="Amount Paid"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:paddingLeft="16dp" />
+        </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/customerNotes"
+                    android:layout_width="270dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/border_rectangular_white"
+                    android:gravity="start|center_vertical"
+                    android:hint="Notes"
+                    android:inputType="textMultiLine"
+                    android:maxLines="1"
+                    android:textSize="14sp"
+                    android:paddingLeft="16dp" />
+
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/linear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btSignIn"
+            android:layout_width="180dp"
+            android:layout_below="@+id/linear"
+            android:layout_height="42dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/ripple_effect"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="SIGN IN"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+</RelativeLayout>
+</ScrollView>

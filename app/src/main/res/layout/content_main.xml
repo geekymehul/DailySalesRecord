@@ -30,6 +30,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/mainactivity_customer"
                     android:background="@drawable/border">
                     <ImageView
                         android:id="@+id/flag"
@@ -72,7 +73,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentRight="true"
                         android:scaleType="fitXY"
-                        android:src="@drawable/Product" />
+                        android:src="@drawable/product" />
 
                     <TextView
                         android:id="@+id/textview1"
@@ -115,7 +116,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_marginBottom="15dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/Sales" />
+                        android:src="@drawable/sales" />
 
                     <TextView
                         android:id="@+id/textview2"
@@ -148,7 +149,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentRight="true"
                         android:scaleType="fitXY"
-                        android:src="@drawable/Reports" />
+                        android:src="@drawable/reports" />
 
                     <TextView
                         android:id="@+id/textview3"
@@ -187,7 +188,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentRight="true"
                     android:scaleType="fitXY"
-                    android:src="@drawable/Representative" />
+                    android:src="@drawable/representative" />
 
                 <TextView
                     android:id="@+id/textview4"
