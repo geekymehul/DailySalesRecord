@@ -36,7 +36,7 @@ public class AddCustomer extends AppCompatActivity {
 
     Uri mImageUri=null;
 
-    private String customerName,customerEmailId,customerAmountPaid,customerNotes,customerPhoneNumber;
+    private String customerName,customerEmailId,customerAmountPaid="0",customerNotes,customerPhoneNumber;
 
     CircleImageView circleImageView;
 
@@ -147,6 +147,8 @@ public class AddCustomer extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 Toast.makeText(AddCustomer.this, "Customer Added successfully", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(AddCustomer.this, CustomerActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(AddCustomer.this, "Please Try Again", Toast.LENGTH_SHORT).show();
