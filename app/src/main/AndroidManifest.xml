@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -26,11 +26,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CustomerActivity"
+            android:name=".Activity.CustomerActivity"
             android:label="@string/title_activity_customer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activity.AddCustomer" />
-        <activity android:name=".Activity.EditCustomer"></activity>
+        <activity android:name=".Activity.EditCustomer" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.RegisterActivity" />
+        <activity
+            android:name=".Activity.ProductActivity"
+            android:label="@string/title_activity_product"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Activity.AddProductActivity"></activity>
     </application>
 
 </manifest>

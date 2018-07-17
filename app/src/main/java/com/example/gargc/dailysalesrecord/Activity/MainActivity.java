@@ -1,9 +1,8 @@
-package com.example.gargc.dailysalesrecord;
+package com.example.gargc.dailysalesrecord.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.provider.MediaStore;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,20 +14,33 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RelativeLayout;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+import com.example.gargc.dailysalesrecord.R;
+import com.google.firebase.auth.FirebaseAuth;
 
-    RelativeLayout customer;
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener
+{
+    FirebaseAuth mAuth;
+    RelativeLayout customer,product;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        findId();
+        mAuth = FirebaseAuth.getInstance();
 
+        if(mAuth.getCurrentUser()==null)
+        {
+            Intent loginIntent = new Intent(MainActivity.this,LoginActivity.class);
+            loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(loginIntent);
+        }
+
+        findId();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -38,12 +50,12 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
     }
 
-    private void findId() {
-        customer=(RelativeLayout) findViewById(R.id.mainactivity_customer);
+    private void findId()
+    {
+        customer = (RelativeLayout)findViewById(R.id.mainactivity_customer);
+        product = (RelativeLayout)findViewById(R.id.mainactivity_product);
     }
 
     @Override
@@ -53,9 +65,16 @@ public class MainActivity extends AppCompatActivity
         customer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(MainActivity.this,CustomerActivity.class);
+                Intent i = new Intent(MainActivity.this,CustomerActivity.class);
                 startActivity(i);
 
+            }
+        });
+
+        product.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,ProductActivity.class));
             }
         });
     }

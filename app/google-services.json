@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "298962027513",
+    "firebase_url": "https://dailysalesrecord-6fd75.firebaseio.com",
+    "project_id": "dailysalesrecord-6fd75",
+    "storage_bucket": "dailysalesrecord-6fd75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298962027513:android:ac4d2399b1a97b50",
+        "android_client_info": {
+          "package_name": "com.example.gargc.dailysalesrecord"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298962027513-2q9edclgpmsgv2tqectsfqtbenmaqcag.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gargc.dailysalesrecord",
+            "certificate_hash": "b29316b87204b3ee125990feabf6d0b446840308"
+          }
+        },
+        {
+          "client_id": "298962027513-o4krrjjjlabcl8ofi1j7fl24nm171q09.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gargc.dailysalesrecord",
+            "certificate_hash": "6089fcdec386fd399db10dfa2ae61edf3c4bce8f"
+          }
+        },
+        {
+          "client_id": "298962027513-eaf2f8d2tisn8j2ff7c4g4j4l5g8m8ld.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT5Z673kbqpbY4vGZwZaYfyujXVDVdRWA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298962027513-eaf2f8d2tisn8j2ff7c4g4j4l5g8m8ld.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

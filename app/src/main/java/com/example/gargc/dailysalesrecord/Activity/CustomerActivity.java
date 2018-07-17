@@ -1,11 +1,9 @@
-package com.example.gargc.dailysalesrecord;
+package com.example.gargc.dailysalesrecord.Activity;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
@@ -19,9 +17,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.gargc.dailysalesrecord.Activity.AddCustomer;
-import com.example.gargc.dailysalesrecord.Activity.EditCustomer;
 import com.example.gargc.dailysalesrecord.Model.CustomerContent;
+import com.example.gargc.dailysalesrecord.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
